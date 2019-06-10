@@ -4,6 +4,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum
 import com.megacrit.cardcrawl.cards.AbstractCard
 
 object CardColorEnumPatch {
-    @SpireEnum
-    var YUYUKO: AbstractCard.CardColor? = null
+    @SpireEnum(name = "YUYUKO")
+    lateinit var YUYUKO: AbstractCard.CardColor
 }

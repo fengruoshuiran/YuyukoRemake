@@ -1,0 +1,14 @@
+{
+  "yuyuko:Demo": {
+    "NAME":"",
+    "DESCRIPTION": ""
+  },
+  "yuyuko:Butterfly":{
+    "NAME":"蝶",
+    "DESCRIPTION": "是蝶。绽放，凋零。对随机敌人造成 !D! 点伤害。藏匿"
+  },
+  "yuyuko:Sakura": {
+    "NAME":"樱",
+    "DESCRIPTION": "是樱。绽放，凋零。回复 !M! 点生命。藏匿"
+  }
+}

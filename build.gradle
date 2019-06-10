@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'ruoran'
-version '0.0.1'
+version '0.1.0-alpha'
 
 sourceCompatibility = 1.8
 
@@ -14,7 +14,6 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    testCompile group: 'junit', name: 'junit', version: '4.12'
     compileOnly files('lib/desktop-1.0.jar')
     compileOnly files('lib/BaseMod.jar')
     compileOnly files('lib/ModTheSpire.jar')
@@ -27,14 +26,15 @@ jar {
 }
 
 task copyJar(type: Copy) {
-    from file("build/libs/ExtraPile-${version}.jar")
+    from file("build/libs/YuyukoRemake-${version}.jar")
     into file('SlayTheSpire/mods')
 }
 
 copyJar.dependsOn jar
 
-task start() {
-
+task start(type: Exec) {
+    workingDir 'SlayTheSpire'
+    commandLine "$workingDir/jre/bin/javaw.exe", "-jar", "$workingDir/ModTheSpire.jar"
 }
 
 start.dependsOn copyJar

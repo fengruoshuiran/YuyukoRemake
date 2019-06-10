@@ -1,24 +1,24 @@
 package yuyuko.remake
 
 import basemod.BaseMod
-import basemod.interfaces.EditCharactersSubscriber
-import basemod.interfaces.EditCardsSubscriber
+import basemod.interfaces.*
 import  com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
+import yuyuko.remake.customs.Customs
 
 @SpireInitializer
-class YuyukoRemake :  EditCharactersSubscriber{
-    companion object {
-        @JvmStatic
-        fun initialize() {
-            YuyukoRemake()
-        }
-    }
+object YuyukoRemake :  EditCharactersSubscriber, EditStringsSubscriber, EditCardsSubscriber, EditRelicsSubscriber{
+    @JvmStatic fun initialize() {}
 
     init {
         BaseMod.subscribe(this)
+        Customs.setColor()
     }
 
-    override fun receiveEditCharacters() {
+    override fun receiveEditCharacters() = Customs.setCharacter()
 
-    }
+    override fun receiveEditStrings() = Customs.setStrings()
+
+    override fun receiveEditCards()  = Customs.setCards()
+
+    override fun receiveEditRelics() = Customs.setRelics()
 }

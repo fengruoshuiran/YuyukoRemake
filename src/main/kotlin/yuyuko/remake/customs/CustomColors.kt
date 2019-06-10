@@ -4,20 +4,16 @@ import com.megacrit.cardcrawl.cards.AbstractCard
 import basemod.BaseMod
 import com.badlogic.gdx.graphics.Color
 
-object CustomColors {
+internal object CustomColors {
     fun setColor(
-            colorType: AbstractCard.CardColor,
             name: String,
-            r: Float,
-            g: Float,
-            b: Float,
-            a: Float
+            color: Color,
+            colorType: AbstractCard.CardColor
     ) {
-        val customColor = Color(r, g, b, a)
         val rootImagesPath = "$name/images/"
 
         BaseMod.addColor(colorType,
-                customColor, customColor, customColor, customColor, customColor, customColor, customColor,
+                color, color, color, color, color, color, color,
                 "${rootImagesPath}backgrounds/512/attack.png",
                 "${rootImagesPath}backgrounds/512/skill.png",
                 "${rootImagesPath}backgrounds/512/power.png",

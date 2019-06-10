@@ -4,6 +4,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 
 object PlayerClassEnumPatch {
-    @SpireEnum
-    var YUYUKO: AbstractPlayer.PlayerClass? = null
+    @SpireEnum(name = "YUYUKO")
+    lateinit var YUYUKO: AbstractPlayer.PlayerClass
 }

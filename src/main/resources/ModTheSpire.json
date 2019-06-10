@@ -1,0 +1,15 @@
+{
+  "modid": "Team TouhouSpire 04 - YuyukoRemake",
+  "name": "Yuyuko",
+  "author_list": [
+    "若然",
+    "Gogo"
+  ],
+  "description": "Adds Yuyuko（西行寺 幽々子） from Touhou Project as a new playable character.",
+  "dependencies": [
+    "basemod"
+  ],
+  "version": "0.1.0-alpha",
+  "sts_version": "01-10-2019",
+  "mts_version": "3.6.3"
+}
