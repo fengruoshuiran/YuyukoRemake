@@ -1,16 +1,13 @@
-package yuyuko.remake.relics
+package yuyuko.remake.relics.yuyuko
 
-import basemod.abstracts.CustomRelic
-import com.megacrit.cardcrawl.actions.common.MakeTempCardAtBottomOfDeckAction
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
-import com.megacrit.cardcrawl.helpers.ImageMaster
 import yuyuko.remake.cards.yuyuko.Butterfly
 import yuyuko.remake.cards.yuyuko.Sakura
+import yuyuko.remake.relics.YuyukoRelic
 
-class Yuyukosfan : CustomRelic(
+class Yuyukosfan : YuyukoRelic(
         relicId,
-        ImageMaster.loadImage(imgPath),
         RelicTier.STARTER,
         LandingSound.MAGICAL
 ) {
@@ -34,9 +31,7 @@ class Yuyukosfan : CustomRelic(
     }
 
     companion object {
-        val characterName = "yuyuko"
         val relicId = "Yuyuko's Fan"
-        val imgPath = "$characterName/images/relics/$relicId.png"
 
         val amount = 5
     }

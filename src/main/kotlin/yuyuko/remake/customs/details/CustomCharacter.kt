@@ -1,7 +1,8 @@
-package yuyuko.remake.customs
+package yuyuko.remake.customs.details
 
 import basemod.BaseMod
 import com.megacrit.cardcrawl.characters.AbstractPlayer
+import yuyuko.remake.charcacter.CustomYuyuko
 
 object CustomCharacter {
     fun setCharacter(

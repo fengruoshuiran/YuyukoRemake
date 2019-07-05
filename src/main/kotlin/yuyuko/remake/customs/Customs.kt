@@ -1,35 +1,18 @@
 package yuyuko.remake.customs
 
-import com.badlogic.gdx.graphics.Color
-import com.megacrit.cardcrawl.core.CardCrawlGame
-import com.megacrit.cardcrawl.localization.CharacterStrings
-import yuyuko.remake.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardColorEnumPatch
-import yuyuko.remake.patches.com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClassEnumPatch
+import yuyuko.remake.customs.details.CustomRelics
+import yuyuko.remake.customs.details.CustomCards
+import yuyuko.remake.customs.details.CustomCharacter
+import yuyuko.remake.customs.details.CustomColors
+import yuyuko.remake.customs.details.CustomStrings
+import yuyuko.remake.info.YuyukoInfo
 
 object Customs{
-    val name = "yuyuko"
-    val colorType = CardColorEnumPatch.YUYUKO
-    val playerType = PlayerClassEnumPatch.YUYUKO
-    val color = Color(227f, 48f, 255f, 1f)
+    fun setColor() = CustomColors.setColor(YuyukoInfo.Customs.name, YuyukoInfo.Customs.color, YuyukoInfo.Customs.colorType)
 
-    object BaseInfo{
-        val energy = 3
-        val HP = 40
-        val gold = 99
-        val cardDraw = 5
-    }
+    fun setCharacter() = CustomCharacter.setCharacter(YuyukoInfo.Customs.name, YuyukoInfo.Customs.playerType)
 
-    object CharacterString{
-        val characterString = CardCrawlGame.languagePack.getCharacterString("yuyuko")
-        val name = characterString.NAMES[0]
-        val description = characterString.TEXT[0]
-    }
-
-    fun setColor() = CustomColors.setColor(name, color, colorType)
-
-    fun setCharacter() = CustomCharacter.setCharacter(name, playerType)
-
-    fun setStrings() = CustomStrings.setStrings(name, arrayOf(
+    fun setStrings() = CustomStrings.setStrings(YuyukoInfo.Customs.name, arrayOf(
             "card",
             "event",
             "character",
