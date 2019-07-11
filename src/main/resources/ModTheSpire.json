@@ -9,7 +9,7 @@
   "dependencies": [
     "basemod"
   ],
-  "version": "0.1.1-alpha",
-  "sts_version": "01-10-2019",
-  "mts_version": "3.6.3"
+  "version": "0.1.2-alpha",
+  "sts_version": "07-01-2019",
+  "mts_version": "3.11.0"
 }
