@@ -65,6 +65,8 @@ class CustomYuyuko() : CustomPlayer(
                 "yuyuko:Sakura",
                 "yuyuko:Sakura",
                 "yuyuko:Sakura",
+                "yuyuko:Sakura",
+                "yuyuko:Butterfly",
                 "yuyuko:Butterfly",
                 "yuyuko:Butterfly",
                 "yuyuko:Butterfly",
