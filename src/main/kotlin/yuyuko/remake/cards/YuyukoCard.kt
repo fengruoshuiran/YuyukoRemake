@@ -31,6 +31,10 @@ abstract class YuyukoCard(
     override var isWither = false
     override var isRevive = false
 
+    override fun use(self: AbstractPlayer?, target: AbstractMonster?) {}
+
+    override fun upgrade() {}
+
     override fun bloom() {}
 
     companion object {

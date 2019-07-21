@@ -15,7 +15,7 @@ class Sakura : YuyukoCard(
         CardTarget.SELF
 ) {
     init {
-        isHide = true
+        isHide = false
         isBloom = true
         isWither = true
 

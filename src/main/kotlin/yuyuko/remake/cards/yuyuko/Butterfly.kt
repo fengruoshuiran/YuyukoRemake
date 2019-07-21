@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.remake.cards.YuyukoCard
 import yuyuko.remake.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
+import yuyuko.remake.random.YuyukoRng
 
 class Butterfly : YuyukoCard(
         id,
@@ -15,7 +16,7 @@ class Butterfly : YuyukoCard(
         CardType.STATUS,
         CardRarity.SPECIAL,
         CardTarget.ENEMY
-) {
+){
     init {
         isHide = true
         isBloom = true
@@ -31,7 +32,14 @@ class Butterfly : YuyukoCard(
 
     override fun canUse(self: AbstractPlayer?, target: AbstractMonster?) = true
 
-    override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
+    override fun bloom() {
+        val self = AbstractDungeon.player
+        //select a random monster
+        val target = AbstractDungeon.getCurrRoom().monsters.monsters
+                .filter { !it.isDeadOrEscaped }.let {
+                    it.elementAtOrNull(YuyukoRng.random(it.count()))
+                }
+
         AbstractDungeon.actionManager.addToBottom(
                 DamageAction(
                         target,
