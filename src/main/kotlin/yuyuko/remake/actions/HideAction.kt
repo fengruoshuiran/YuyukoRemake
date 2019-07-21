@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.core.Settings
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 
-class HideAction(private val card:AbstractCard) : AbstractGameAction() {
+class HideAction(private val card: AbstractCard) : AbstractGameAction() {
     init {
         this.duration = Settings.ACTION_DUR_MED
     }
@@ -16,9 +16,7 @@ class HideAction(private val card:AbstractCard) : AbstractGameAction() {
         card.unhover()
         player.hand.removeCard(card)
         player.drawPile.addToBottom(card)
-        AbstractDungeon.actionManager.addToBottom(
-                DrawCardAction(player, 1)
-        )
+        AbstractDungeon.actionManager.addToBottom(DrawCardAction(player, 1))
         this.isDone = true
     }
 }

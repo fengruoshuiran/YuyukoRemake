@@ -20,21 +20,22 @@ abstract class YuyukoCard(
         color,
         rarity,
         target
-) {
+),
+        IYuyukoCard
+{
 
-    var isHide = false
-    var isBloom = false
-    var isWither = false
-    var isRevive = false
+    override var isHide = false
+    override var isBloom = false
+    override var isWither = false
+    override var isRevive = false
 
     companion object {
         private val characterName = "yuyuko"
         val color = CardColorEnumPatch.YUYUKO
-        fun getFullId(id: String) = "$characterName:$id"
-        fun getName(id: String) = CardCrawlGame.languagePack.getCardStrings(getFullId(id)).NAME
-        fun getDescripion(id: String) = CardCrawlGame.languagePack.getCardStrings(getFullId(id)).DESCRIPTION
-        fun getImgPath(id: String) = "$characterName/images/cards/$id.png"
-        fun getUpdateDescripion(id: String) = CardCrawlGame.languagePack.getCardStrings(getFullId(id)).UPGRADE_DESCRIPTION
+        private fun getFullId(id: String) = "$characterName:$id"
+        private fun getName(id: String) = CardCrawlGame.languagePack.getCardStrings(getFullId(id)).NAME
+        private fun getDescripion(id: String) = CardCrawlGame.languagePack.getCardStrings(getFullId(id)).DESCRIPTION
+        private fun getImgPath(id: String) = "$characterName/images/cards/$id.png"
+        private fun getUpdateDescripion(id: String) = CardCrawlGame.languagePack.getCardStrings(getFullId(id)).UPGRADE_DESCRIPTION
     }
-
 }
