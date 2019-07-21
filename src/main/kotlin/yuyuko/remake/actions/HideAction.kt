@@ -16,7 +16,9 @@ class HideAction(private val card: AbstractCard) : AbstractGameAction() {
         card.unhover()
         player.hand.removeCard(card)
         player.drawPile.addToBottom(card)
-        AbstractDungeon.actionManager.addToBottom(DrawCardAction(player, 1))
+        AbstractDungeon.actionManager.addToBottom(
+                DrawCardAction(player, 1)
+        )
         this.isDone = true
     }
 }

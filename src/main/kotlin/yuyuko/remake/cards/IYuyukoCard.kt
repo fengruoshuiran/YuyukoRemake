@@ -5,4 +5,6 @@ interface IYuyukoCard {
     var isBloom: Boolean
     var isWither: Boolean
     var isRevive: Boolean
+
+    fun bloom()
 }

@@ -1,7 +1,9 @@
 package yuyuko.remake.cards
 
 import basemod.abstracts.CustomCard
+import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
+import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.remake.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardColorEnumPatch
 
 abstract class YuyukoCard(
@@ -28,6 +30,8 @@ abstract class YuyukoCard(
     override var isBloom = false
     override var isWither = false
     override var isRevive = false
+
+    override fun bloom() {}
 
     companion object {
         private val characterName = "yuyuko"

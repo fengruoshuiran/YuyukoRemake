@@ -1,5 +1,6 @@
 package yuyuko.remake.events.details
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import org.apache.logging.log4j.LogManager
@@ -8,20 +9,25 @@ import yuyuko.remake.cards.YuyukoCard
 
 object DrawCardEvent {
     fun onDraw(card: AbstractCard) {
-        if (!hideEvent(card)) bloomEvent(card)
-    }
-
-    private fun hideEvent(card: AbstractCard): Boolean {
-        if (card is YuyukoCard && card.isHide && shouldHide()) {
-            AbstractDungeon.actionManager.addToTop(HideAction(card))
-            return true
+        if(card is YuyukoCard) {
+            if (hideEvent(card)) return
+            bloomEvent(card)
         }
-        return false
     }
 
-    private fun bloomEvent(card: AbstractCard) {
-        if (card is YuyukoCard && card.isBloom) {
+    private fun hideEvent(card: YuyukoCard): Boolean {
+        if (shouldHide(card)) AbstractDungeon.actionManager.addToTop(
+                HideAction(card)
+        )
+        return shouldHide(card)
+    }
 
+    private fun bloomEvent(card: YuyukoCard) {
+        if (card.isBloom) {
+            card.bloom()
+            AbstractDungeon.actionManager.addToBottom(
+                    DrawCardAction(AbstractDungeon.player, 1)
+            )
         }
     }
 
@@ -30,5 +36,5 @@ object DrawCardEvent {
 
     private fun countDrawPileCard() = AbstractDungeon.player.drawPile.group.count()
 
-    private fun shouldHide() = countDrawPileHideCard() < countDrawPileCard()
+    private fun shouldHide(card: YuyukoCard) = card.isHide && countDrawPileHideCard() < countDrawPileCard()
 }
