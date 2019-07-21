@@ -9,12 +9,4 @@ object YuyukoRng {
     fun random(range: Int) = commonRandom(range)
 
     fun commonRandom(range: Int) = commonRng.random(range)
-
-
-    fun <T> listRandom(list: List<T>): T? {
-        when (list.isEmpty()) {
-            true -> return null
-            false -> return list[random(list.count())]
-        }
-    }
 }
