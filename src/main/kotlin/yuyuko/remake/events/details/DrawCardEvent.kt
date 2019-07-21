@@ -11,19 +11,17 @@ object DrawCardEvent {
     fun onDraw(card: AbstractCard) {
         if(card is YuyukoCard) {
             if (hideEvent(card)) return
-            bloomEvent(card)
+            if (bloomEvent(card)) return
         }
     }
 
-    private fun hideEvent(card: YuyukoCard): Boolean {
-        if (shouldHide(card)) AbstractDungeon.actionManager.addToTop(
-                HideAction(card)
-        )
-        return shouldHide(card)
-    }
+    private fun hideEvent(card: YuyukoCard) = shouldHide(card).also{
+        if (it) AbstractDungeon.actionManager.addToTop(
+            HideAction(card)
+    ) }
 
-    private fun bloomEvent(card: YuyukoCard) {
-        if (card.isBloom) {
+    private fun bloomEvent(card: YuyukoCard) = card.isBloom.also {
+        if (it) {
             card.bloom()
             AbstractDungeon.actionManager.addToBottom(
                     DrawCardAction(AbstractDungeon.player, 1)
