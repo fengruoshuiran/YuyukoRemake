@@ -1,7 +1,7 @@
 package yuyuko.remake.charcacter
 
 import basemod.abstracts.CustomPlayer
-import yuyuko.remake.patches.com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClassEnumPatch
+import yuyuko.remake.base.patches.com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClassEnumPatch
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.g2d.BitmapFont
 import com.badlogic.gdx.math.MathUtils
@@ -13,8 +13,7 @@ import com.megacrit.cardcrawl.core.EnergyManager
 import com.megacrit.cardcrawl.helpers.FontHelper
 import com.megacrit.cardcrawl.screens.CharSelectInfo
 import yuyuko.remake.cards.yuyuko.Sakura
-import yuyuko.remake.customs.Customs
-import yuyuko.remake.info.YuyukoInfo
+import yuyuko.remake.base.info.Info
 
 class CustomYuyuko() : CustomPlayer(
         CardCrawlGame.playerName,
@@ -44,7 +43,7 @@ class CustomYuyuko() : CustomPlayer(
                 "yuyuko/images/character/corpse.png",
                 getLoadout(),
                 20.0f, -10.0f, 220.0f, 290.0f,
-                EnergyManager(YuyukoInfo.CharacterInfo.energy)
+                EnergyManager(Info.CharacterInfo.energy)
         )
 
         this.loadAnimation(
@@ -83,26 +82,26 @@ class CustomYuyuko() : CustomPlayer(
 
     override fun getLoadout(): CharSelectInfo {
         return CharSelectInfo(
-                YuyukoInfo.CharacterString.name,
-                YuyukoInfo.CharacterString.description,
-                YuyukoInfo.CharacterInfo.HP,
-                YuyukoInfo.CharacterInfo.HP,
+                Info.CharacterString.name,
+                Info.CharacterString.description,
+                Info.CharacterInfo.HP,
+                Info.CharacterInfo.HP,
                 0,
-                YuyukoInfo.CharacterInfo.gold,
-                YuyukoInfo.CharacterInfo.cardDraw,
+                Info.CharacterInfo.gold,
+                Info.CharacterInfo.cardDraw,
                 this,
                 startingRelics,
                 startingDeck,
                 false)
     }
 
-    override fun getTitle(p0: PlayerClass?): String = YuyukoInfo.CharacterString.name
+    override fun getTitle(p0: PlayerClass?): String = Info.CharacterString.name
 
-    override fun getCardColor(): AbstractCard.CardColor = YuyukoInfo.Customs.colorType
+    override fun getCardColor(): AbstractCard.CardColor = Info.Customs.colorType
 
-    override fun getStartCardForEvent(): AbstractCard = Sakura() //TODO:Start attack card
+    override fun getStartCardForEvent(): AbstractCard = Sakura()
 
-    override fun getCardTrailColor(): Color = YuyukoInfo.Customs.color
+    override fun getCardTrailColor(): Color = Info.Customs.color
 
     override fun getAscensionMaxHPLoss(): Int = 0
 
@@ -112,13 +111,13 @@ class CustomYuyuko() : CustomPlayer(
 
     override fun getCustomModeCharacterButtonSoundKey(): String = "ATTACK_MAGIC_BEAM_SHORT"
 
-    override fun getLocalizedCharacterName(): String = YuyukoInfo.CharacterString.name
+    override fun getLocalizedCharacterName(): String = Info.CharacterString.name
 
     override fun newInstance(): AbstractPlayer = CustomYuyuko()
 
-    override fun getCardRenderColor(): Color = YuyukoInfo.Customs.color
+    override fun getCardRenderColor(): Color = Info.Customs.color
 
-    override fun getSlashAttackColor(): Color = YuyukoInfo.Customs.color
+    override fun getSlashAttackColor(): Color = Info.Customs.color
 
     override fun getSpireHeartText(): String = CardCrawlGame.languagePack
             .getEventString("spireHeart").DESCRIPTIONS[0]

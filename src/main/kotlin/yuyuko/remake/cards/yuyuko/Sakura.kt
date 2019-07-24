@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.remake.cards.YuyukoCard
-import yuyuko.remake.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
+import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
 
 class Sakura : YuyukoCard(
         id,
@@ -16,8 +16,7 @@ class Sakura : YuyukoCard(
 ) {
     init {
         isHide = false
-        isBloom = true
-        isWither = true
+        isDying = false
 
         this.tags.add(CardTagsEnumPatch.SAKURA)
 

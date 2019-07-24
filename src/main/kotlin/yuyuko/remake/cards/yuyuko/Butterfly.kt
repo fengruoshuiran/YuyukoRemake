@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.remake.cards.YuyukoCard
-import yuyuko.remake.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
-import yuyuko.remake.random.YuyukoRng
+import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
+import yuyuko.remake.base.random.YuyukoRng
 
 class Butterfly : YuyukoCard(
         id,
@@ -19,12 +19,11 @@ class Butterfly : YuyukoCard(
 ){
     init {
         isHide = true
-        isBloom = true
-        isWither = true
+        isDying = true
 
         this.tags.add(CardTagsEnumPatch.BUTTERFLY)
 
-        baseDamage = baseDamageNumber
+        baseDamage = BASE_DAMAGE_NUMBER
     }
 
 
@@ -32,13 +31,13 @@ class Butterfly : YuyukoCard(
 
     override fun canUse(self: AbstractPlayer?, target: AbstractMonster?) = true
 
-    override fun bloom() {
+    override fun dying() {
         val self = AbstractDungeon.player
         //select a random monster
         val target = AbstractDungeon.getCurrRoom().monsters.monsters
                 .filter { !it.isDeadOrEscaped }.let {
                     it.elementAtOrNull(YuyukoRng.random(it.count()))
-                }
+                }?: return
 
         AbstractDungeon.actionManager.addToBottom(
                 DamageAction(
@@ -52,7 +51,7 @@ class Butterfly : YuyukoCard(
 
     override fun upgrade() {
         upgradeName()
-        upgradeMagicNumber(upgradeDamageNumber)
+        upgradeMagicNumber(UPGRADE_DAMAGE_NUMBER)
     }
 
     override fun upgradeName() {
@@ -66,7 +65,7 @@ class Butterfly : YuyukoCard(
         val id = "Butterfly"
         val cost = -2
 
-        val baseDamageNumber = 1
-        val upgradeDamageNumber = 1
+        const val BASE_DAMAGE_NUMBER = 1
+        const val UPGRADE_DAMAGE_NUMBER = 1
     }
 }

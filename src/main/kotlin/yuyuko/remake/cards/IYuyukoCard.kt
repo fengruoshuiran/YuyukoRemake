@@ -2,9 +2,8 @@ package yuyuko.remake.cards
 
 interface IYuyukoCard {
     var isHide: Boolean
-    var isBloom: Boolean
-    var isWither: Boolean
-    var isRevive: Boolean
+    var isDying: Boolean
+    var isRebirth: Boolean
 
-    fun bloom()
+    fun dying()
 }

@@ -4,8 +4,10 @@ import basemod.BaseMod
 import basemod.interfaces.*
 import  com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
 import com.megacrit.cardcrawl.cards.AbstractCard
-import yuyuko.remake.customs.Customs
-import yuyuko.remake.events.Events
+import com.megacrit.cardcrawl.rooms.AbstractRoom
+import yuyuko.remake.base.customs.CustomManager
+import yuyuko.remake.base.events.EventManager
+import yuyuko.remake.base.events.info.OnDrawHookInfo
 
 @SpireInitializer
 object YuyukoRemake :
@@ -13,21 +15,24 @@ object YuyukoRemake :
         EditStringsSubscriber,
         EditCardsSubscriber,
         EditRelicsSubscriber,
-        PostDrawSubscriber {
+        PostDrawSubscriber,
+        OnStartBattleSubscriber {
     @JvmStatic fun initialize() {}
 
     init {
         BaseMod.subscribe(this)
-        Customs.setColor()
+        CustomManager.setColor()
     }
 
-    override fun receiveEditCharacters() = Customs.setCharacter()
+    override fun receiveEditCharacters() = CustomManager.setCharacter()
 
-    override fun receiveEditStrings() = Customs.setStrings()
+    override fun receiveEditStrings() = CustomManager.setStrings()
 
-    override fun receiveEditCards()  = Customs.setCards()
+    override fun receiveEditCards()  = CustomManager.setCards()
 
-    override fun receiveEditRelics() = Customs.setRelics()
+    override fun receiveEditRelics() = CustomManager.setRelics()
 
-    override fun receivePostDraw(abstractCard: AbstractCard) = Events.onDraw(abstractCard)
+    override fun receivePostDraw(card: AbstractCard) = EventManager.call(OnDrawHookInfo(card))
+
+    override fun receiveOnBattleStart(room: AbstractRoom?) { EventManager.initSubscribe() }
 }
