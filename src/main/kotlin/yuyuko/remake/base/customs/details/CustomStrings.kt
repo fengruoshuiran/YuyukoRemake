@@ -1,4 +1,4 @@
-package yuyuko.remake.customs.details
+package yuyuko.remake.base.customs.details
 
 import basemod.BaseMod
 import com.megacrit.cardcrawl.core.Settings
