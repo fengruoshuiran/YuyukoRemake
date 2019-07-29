@@ -2,10 +2,10 @@ package yuyuko.remake.base.customs.details
 
 import basemod.BaseMod
 import yuyuko.remake.base.info.Info
-import yuyuko.remake.relics.yuyuko.Yuyukosfan
+import yuyuko.remake.relics.yuyuko.YuyukosFan
 
 object CustomRelics {
     fun setRelics() {
-        BaseMod.addRelicToCustomPool(Yuyukosfan(), Info.Customs.colorType)
+        BaseMod.addRelicToCustomPool(YuyukosFan(), Info.Customs.colorType)
     }
 }

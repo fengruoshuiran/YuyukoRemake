@@ -6,7 +6,7 @@ import yuyuko.remake.cards.yuyuko.Butterfly
 import yuyuko.remake.cards.yuyuko.Sakura
 import yuyuko.remake.relics.YuyukoRelic
 
-class Yuyukosfan : YuyukoRelic(
+class YuyukosFan : YuyukoRelic(
         relicId,
         RelicTier.STARTER,
         LandingSound.MAGICAL
@@ -24,7 +24,7 @@ class Yuyukosfan : YuyukoRelic(
         )
     }
 
-    override fun makeCopy() = Yuyukosfan()
+    override fun makeCopy() = YuyukosFan()
 
     override fun getUpdatedDescription(): String {
         return DESCRIPTIONS[0]
