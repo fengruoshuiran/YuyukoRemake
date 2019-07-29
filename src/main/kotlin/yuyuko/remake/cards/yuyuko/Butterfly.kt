@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.remake.base.actions.YuyukoActionManager
+import yuyuko.remake.base.actions.yuyuko.DealRandomHPLossYuyukoAction
 import yuyuko.remake.cards.YuyukoCard
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
 import yuyuko.remake.base.random.YuyukoRng
@@ -32,19 +34,7 @@ class Butterfly : YuyukoCard(
     override fun canUse(self: AbstractPlayer?, target: AbstractMonster?) = true
 
     override fun fading() {
-        val self = AbstractDungeon.player
-        //select a random monster
-        val target = AbstractDungeon.getCurrRoom().monsters.monsters
-                .filter { !it.isDeadOrEscaped }.let {
-                    it.elementAtOrNull(YuyukoRng.random(it.count()))
-                }?: return
-
-        AbstractDungeon.actionManager.addToBottom(
-                DamageAction(
-                        target,
-                        DamageInfo(self, baseDamage, DamageInfo.DamageType.HP_LOSS),
-                        AbstractGameAction.AttackEffect.SLASH_DIAGONAL)
-        )
+        YuyukoActionManager.add(DealRandomHPLossYuyukoAction(baseDamage))
     }
 
     override fun canUpgrade() = true

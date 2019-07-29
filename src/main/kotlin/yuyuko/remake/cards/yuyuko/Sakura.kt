@@ -17,6 +17,7 @@ class Sakura : YuyukoCard(
     init {
         isHide = false
         isFading = false
+        this.exhaust = true
 
         this.tags.add(CardTagsEnumPatch.SAKURA)
 

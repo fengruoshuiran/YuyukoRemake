@@ -8,7 +8,7 @@ import yuyuko.remake.cards.YuyukoCard
 class FadingYuyukoAction(private val card: YuyukoCard) : AbstractYuyukoAction() {
     override fun action() {
         YuyukoActionManager.logger.info("Fading cards: ${card.name}")
-        AbstractDungeon.actionManager.addToTop(
+        AbstractDungeon.actionManager.addToBottom(
                 FadingBaseAction(card)
         )
     }

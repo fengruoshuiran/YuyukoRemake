@@ -8,7 +8,7 @@ import yuyuko.remake.cards.YuyukoCard
 class HideYuyukoAction(private val card: YuyukoCard) : AbstractYuyukoAction() {
     override fun action() {
         YuyukoActionManager.logger.info("Hide cards: ${card.name}")
-        AbstractDungeon.actionManager.addToTop(
+        AbstractDungeon.actionManager.addToBottom(
                 HideBaseAction(card)
         )
     }
