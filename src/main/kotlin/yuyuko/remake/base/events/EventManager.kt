@@ -3,7 +3,7 @@ package yuyuko.remake.base.events
 import yuyuko.remake.cards.yuyuko.Sakura
 import yuyuko.remake.base.events.info.AbstractHookInfo
 import yuyuko.remake.base.events.yuyuko.AbstractYuyukoEvent
-import yuyuko.remake.base.events.yuyuko.DyingYuyukoEvent
+import yuyuko.remake.base.events.yuyuko.FadingYuyukoEvent
 import yuyuko.remake.base.events.yuyuko.HideYuyukoEvent
 import yuyuko.remake.base.events.info.OnDrawHookInfo
 
@@ -12,7 +12,7 @@ object EventManager {
 
     fun initSubscribe() {
         subscribe(OnDrawHookInfo(Sakura()).hookName, HideYuyukoEvent())
-        subscribe(OnDrawHookInfo(Sakura()).hookName, DyingYuyukoEvent())
+        subscribe(OnDrawHookInfo(Sakura()).hookName, FadingYuyukoEvent())
     }
 
     fun subscribe(publisher: String, subscriber: AbstractYuyukoEvent) {

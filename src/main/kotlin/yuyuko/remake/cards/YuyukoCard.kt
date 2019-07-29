@@ -27,14 +27,14 @@ abstract class YuyukoCard(
 {
 
     override var isHide = false
-    override var isDying = false
+    override var isFading = false
     override var isRebirth = false
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {}
 
     override fun upgrade() {}
 
-    override fun dying() {}
+    override fun fading() {}
 
     companion object {
         private val characterName = "yuyuko"

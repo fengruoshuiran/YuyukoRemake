@@ -19,7 +19,7 @@ class Butterfly : YuyukoCard(
 ){
     init {
         isHide = true
-        isDying = true
+        isFading = true
 
         this.tags.add(CardTagsEnumPatch.BUTTERFLY)
 
@@ -31,7 +31,7 @@ class Butterfly : YuyukoCard(
 
     override fun canUse(self: AbstractPlayer?, target: AbstractMonster?) = true
 
-    override fun dying() {
+    override fun fading() {
         val self = AbstractDungeon.player
         //select a random monster
         val target = AbstractDungeon.getCurrRoom().monsters.monsters
