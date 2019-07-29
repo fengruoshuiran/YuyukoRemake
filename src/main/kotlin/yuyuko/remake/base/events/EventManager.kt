@@ -1,5 +1,6 @@
 package yuyuko.remake.base.events
 
+import org.apache.logging.log4j.LogManager
 import yuyuko.remake.cards.yuyuko.Sakura
 import yuyuko.remake.base.events.info.AbstractHookInfo
 import yuyuko.remake.base.events.yuyuko.AbstractYuyukoEvent
@@ -9,6 +10,7 @@ import yuyuko.remake.base.events.info.OnDrawHookInfo
 
 object EventManager {
     private val relationship: MutableMap<String, MutableSet<AbstractYuyukoEvent>> = mutableMapOf()
+    private val logger = LogManager.getLogger(this.javaClass.name)
 
     fun initSubscribe() {
         subscribe(OnDrawHookInfo(Sakura()).hookName, HideYuyukoEvent())
@@ -24,7 +26,9 @@ object EventManager {
 
     fun call(hookInfo: AbstractHookInfo) {
         for (subscriber in relationship[hookInfo.hookName]!!) {
-            if(subscriber.call(hookInfo)) break
+            val isDone = subscriber.call(hookInfo)
+            logger.info("${hookInfo.hookName} called ${subscriber.javaClass.name}.IsDone: $isDone")
+            if(isDone) break
         }
     }
 }
