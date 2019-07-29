@@ -10,10 +10,10 @@ class FadingYuyukoEvent : AbstractYuyukoEvent() {
     override fun call(info: AbstractHookInfo): Boolean {
         if (info !is OnDrawHookInfo) return false
         if (info.card !is YuyukoCard) return false
-        if (!shouldDying(info.card)) return false
+        if (!shouldFading(info.card)) return false
         YuyukoActionManager.add(FadingYuyukoAction(info.card))
         return true
     }
 
-    private fun shouldDying(card: YuyukoCard) = card.isFading
+    private fun shouldFading(card: YuyukoCard) = card.isFading
 }
