@@ -1,16 +1,11 @@
 package yuyuko.remake.cards.yuyuko
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction
-import com.megacrit.cardcrawl.actions.common.DamageAction
-import com.megacrit.cardcrawl.cards.DamageInfo
 import com.megacrit.cardcrawl.characters.AbstractPlayer
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.remake.base.actions.YuyukoActionManager
-import yuyuko.remake.base.actions.yuyuko.DealRandomHPLossYuyukoAction
+import yuyuko.remake.base.actions.yuyuko.custom.DealRandomHPLossYuyukoAction
 import yuyuko.remake.cards.YuyukoCard
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
-import yuyuko.remake.base.random.YuyukoRng
 
 class Butterfly : YuyukoCard(
         id,

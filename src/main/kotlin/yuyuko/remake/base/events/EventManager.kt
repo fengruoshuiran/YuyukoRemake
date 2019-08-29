@@ -10,7 +10,6 @@ import yuyuko.remake.base.events.info.OnDrawHookInfo
 
 object EventManager {
     private val relationship: MutableMap<String, MutableSet<AbstractYuyukoEvent>> = mutableMapOf()
-    private val logger = LogManager.getLogger(this.javaClass.name)
 
     fun initSubscribe() {
         subscribe(OnDrawHookInfo(Sakura()).hookName, HideYuyukoEvent())
@@ -27,7 +26,6 @@ object EventManager {
     fun call(hookInfo: AbstractHookInfo) {
         for (subscriber in relationship[hookInfo.hookName]!!) {
             val isDone = subscriber.call(hookInfo)
-            logger.info("${hookInfo.hookName} called ${subscriber.javaClass.name}.IsDone: $isDone")
             if(isDone) break
         }
     }

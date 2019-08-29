@@ -2,7 +2,7 @@ package yuyuko.remake.base.events.yuyuko
 
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import yuyuko.remake.base.actions.YuyukoActionManager
-import yuyuko.remake.base.actions.yuyuko.HideYuyukoAction
+import yuyuko.remake.base.actions.yuyuko.custom.HideYuyukoAction
 import yuyuko.remake.cards.YuyukoCard
 import yuyuko.remake.base.events.info.AbstractHookInfo
 import yuyuko.remake.base.events.info.OnDrawHookInfo
