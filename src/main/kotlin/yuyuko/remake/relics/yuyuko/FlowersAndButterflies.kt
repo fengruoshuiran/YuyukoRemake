@@ -24,7 +24,7 @@ class FlowersAndButterflies() : YuyukoRelic(
     override fun effect() {
         AbstractDungeon.actionManager.addToBottom(
                 MakeTempCardInDrawPileAction(
-                        Sakura(), amount,true, true
+                        Sakura(), 1,true, true
                 )
         )
         AbstractDungeon.actionManager.addToBottom(

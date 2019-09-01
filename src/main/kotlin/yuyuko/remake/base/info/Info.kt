@@ -1,11 +1,14 @@
 package yuyuko.remake.base.info
 
 import com.badlogic.gdx.graphics.Color
+import com.megacrit.cardcrawl.cards.CardGroup
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardColorEnumPatch
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClassEnumPatch
 
 object Info {
+    val faded: CardGroup = CardGroup(CardGroup.CardGroupType.UNSPECIFIED)
+
     object Customs {
         const val name = "yuyuko"
         val colorType = CardColorEnumPatch.YUYUKO

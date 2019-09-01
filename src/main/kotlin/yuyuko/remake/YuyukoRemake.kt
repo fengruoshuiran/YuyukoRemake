@@ -15,7 +15,6 @@ object YuyukoRemake :
         EditStringsSubscriber,
         EditCardsSubscriber,
         EditRelicsSubscriber,
-        PostDrawSubscriber,
         OnStartBattleSubscriber {
     @JvmStatic fun initialize() {}
 
@@ -31,8 +30,6 @@ object YuyukoRemake :
     override fun receiveEditCards()  = CustomManager.setCards()
 
     override fun receiveEditRelics() = CustomManager.setRelics()
-
-    override fun receivePostDraw(card: AbstractCard) = EventManager.call(OnDrawHookInfo(card))
 
     override fun receiveOnBattleStart(room: AbstractRoom?) { EventManager.initSubscribe() }
 }

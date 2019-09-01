@@ -17,6 +17,7 @@ class Butterfly : YuyukoCard(
     init {
         isHide = true
         isFading = true
+        isRebirth = true
 
         this.tags.add(CardTagsEnumPatch.BUTTERFLY)
 
