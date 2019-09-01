@@ -14,6 +14,8 @@ abstract class YuyukoRelic(
         relicTier,
         landingSound
 ) {
+    abstract fun effect()
+
     companion object {
         val characterName = "yuyuko"
         fun getFullRelicId(relicId: String) = "$characterName:$relicId"

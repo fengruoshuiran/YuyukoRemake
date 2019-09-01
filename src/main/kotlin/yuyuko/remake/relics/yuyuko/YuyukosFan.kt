@@ -11,7 +11,17 @@ class YuyukosFan : YuyukoRelic(
         RelicTier.STARTER,
         LandingSound.MAGICAL
 ) {
-    override fun onShuffle() {
+    override fun onShuffle() = effect()
+
+    override fun atBattleStartPreDraw() = effect()
+
+    override fun makeCopy() = YuyukosFan()
+
+    override fun getUpdatedDescription(): String {
+        return DESCRIPTIONS[0]
+    }
+
+    override fun effect() {
         AbstractDungeon.actionManager.addToBottom(
                 MakeTempCardInDrawPileAction(
                         Sakura(), amount,true, true
@@ -22,12 +32,6 @@ class YuyukosFan : YuyukoRelic(
                         Butterfly(), amount,true, true
                 )
         )
-    }
-
-    override fun makeCopy() = YuyukosFan()
-
-    override fun getUpdatedDescription(): String {
-        return DESCRIPTIONS[0]
     }
 
     companion object {
