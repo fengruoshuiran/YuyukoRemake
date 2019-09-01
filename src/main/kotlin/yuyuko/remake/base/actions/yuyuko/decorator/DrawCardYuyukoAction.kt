@@ -8,7 +8,7 @@ import yuyuko.remake.base.actions.yuyuko.AbstractYuyukoAction
 class DrawCardYuyukoAction(private val amount: Int) : AbstractYuyukoAction() {
     override fun action() {
         YuyukoActionManager.logger.info("Draw amount: $amount")
-        AbstractDungeon.actionManager.addToTop(
+        AbstractDungeon.actionManager.addToBottom(
                 DrawCardAction(AbstractDungeon.player, 1)
         )
     }
