@@ -77,7 +77,10 @@ class CustomYuyuko() : CustomPlayer(
     }
 
     override fun getStartingRelics(): ArrayList<String> {
-        return arrayListOf("yuyuko:Yuyuko's Fan")
+        return arrayListOf(
+                "yuyuko:Yuyuko's Fan",
+                "yuyuko:Flowers and Butterflies"
+        )
     }
 
     override fun getLoadout(): CharSelectInfo {

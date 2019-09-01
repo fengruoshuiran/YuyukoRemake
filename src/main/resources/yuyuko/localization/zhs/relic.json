@@ -1,18 +1,16 @@
 {
-  "yuyuko:Demo Relic": {
-    "NAME": "",
+  "yuyuko:Flowers and Butterflies": {
+    "NAME": "花蝶",
     "FLAVOR": "",
     "DESCRIPTIONS":[
-      "",
-      "",
-      ""
+      "武器。洗牌时，将5张樱，5张蝶洗入牌堆"
     ]
   },
   "yuyuko:Yuyuko's Fan": {
-    "NAME": "fan",
+    "NAME": "幽幽扇",
     "FLAVOR": "",
     "DESCRIPTIONS":[
-      "demo"
+      "生者必灭，凡人终死"
     ]
   }
 }
