@@ -1,7 +1,7 @@
 package yuyuko.remake.relics.yuyuko
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon
+import yuyuko.remake.base.actions.YuyukoActionManager
+import yuyuko.remake.base.actions.yuyuko.custom.AddCardToDrawPileYuyukoAction
 import yuyuko.remake.cards.yuyuko.Butterfly
 import yuyuko.remake.cards.yuyuko.Sakura
 import yuyuko.remake.relics.YuyukoRelic
@@ -22,16 +22,8 @@ class FlowersAndButterflies() : YuyukoRelic(
     }
 
     override fun effect() {
-        AbstractDungeon.actionManager.addToBottom(
-                MakeTempCardInDrawPileAction(
-                        Sakura(), 1,true, true
-                )
-        )
-        AbstractDungeon.actionManager.addToBottom(
-                MakeTempCardInDrawPileAction(
-                        Butterfly(), amount,true, true
-                )
-        )
+        repeat(5) { YuyukoActionManager.add(AddCardToDrawPileYuyukoAction(Sakura())) }
+        repeat(5) { YuyukoActionManager.add(AddCardToDrawPileYuyukoAction(Butterfly())) }
     }
 
     companion object {
