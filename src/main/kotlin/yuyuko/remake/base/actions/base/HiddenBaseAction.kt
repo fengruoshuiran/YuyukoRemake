@@ -5,7 +5,7 @@ import yuyuko.remake.base.actions.YuyukoActionManager
 import yuyuko.remake.base.actions.yuyuko.decorator.DrawCardYuyukoAction
 import yuyuko.remake.cards.YuyukoCard
 
-class HideBaseAction(private val card: YuyukoCard) : AbstractBaseAction() {
+class HiddenBaseAction(private val card: YuyukoCard) : AbstractBaseAction() {
     override fun update() {
         val player = AbstractDungeon.player
         player.hand.moveToBottomOfDeck(card)

@@ -1,9 +1,9 @@
 package yuyuko.remake.cards.yuyuko
 
-import com.megacrit.cardcrawl.actions.common.HealAction
 import com.megacrit.cardcrawl.characters.AbstractPlayer
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.remake.base.actions.YuyukoActionManager
+import yuyuko.remake.base.actions.yuyuko.decorator.HealYuyukoAction
 import yuyuko.remake.cards.YuyukoCard
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
 
@@ -15,11 +15,13 @@ class Sakura : YuyukoCard(
         CardTarget.SELF
 ) {
     init {
-        isHide = false
+        isHidden = false
         isFading = false
-        this.exhaust = true
+        exhaust = true
 
-        this.tags.add(CardTagsEnumPatch.SAKURA)
+        tags.add(CardTagsEnumPatch.SAKURA)
+
+        updateDescription()
 
         baseMagicNumber = baseHealNumber
         magicNumber = baseHealNumber
@@ -30,10 +32,10 @@ class Sakura : YuyukoCard(
 
     override fun canUse(self: AbstractPlayer?, target: AbstractMonster?) = true
 
-    override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        AbstractDungeon.actionManager.addToBottom(
-            HealAction(self, self, magicNumber)
-        )
+    override fun use(self: AbstractPlayer?, target: AbstractMonster?) = fading()
+
+    override fun fading() {
+        YuyukoActionManager.add(HealYuyukoAction(magicNumber))
     }
 
     override fun canUpgrade() = true

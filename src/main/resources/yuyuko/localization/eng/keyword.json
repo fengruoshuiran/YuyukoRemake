@@ -1,0 +1,51 @@
+{
+  "yuyuko:Eternal": {
+    "TEXT": [
+      "Eternal",
+      "Valar Morghulis. Card without this keyword will discard from deck after defeat a BOSS.",
+      " Eternal."
+    ]
+  },
+  "yuyuko:Fleeting": {
+    "TEXT": [
+      "Fleeting",
+      "Remove from your deck after win.",
+      " Fleeting."
+    ]
+  },
+  "yuyuko:Hidden": {
+    "TEXT": [
+      "Hidden",
+      "Always drew at last.",
+      " Hidden."
+    ]
+  },
+  "yuyuko:Fading": {
+    "TEXT": [
+      "Fading",
+      "Take effect after draw then disappear. Draw another card.",
+      " Fading."
+    ]
+  },
+  "yuyuko:Rebirth": {
+    "TEXT": [
+      "Rebirth",
+      "Return to draw pile when shuffle.",
+      " Rebirth."
+    ]
+  },
+  "yuyuko:Sakura": {
+    "TEXT":[
+      "Sakura",
+      "This is a card tag.",
+      " Is Sakura."
+    ]
+  },
+  "yuyuko:Butterfly": {
+    "TEXT":[
+      "Butterfly",
+      "This is a card tag.",
+      " Is Butterfly."
+    ]
+  }
+}

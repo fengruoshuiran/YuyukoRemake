@@ -15,11 +15,13 @@ class Butterfly : YuyukoCard(
         CardTarget.ENEMY
 ){
     init {
-        isHide = true
+        isHidden = true
         isFading = true
         isRebirth = true
 
-        this.tags.add(CardTagsEnumPatch.BUTTERFLY)
+        tags.add(CardTagsEnumPatch.BUTTERFLY)
+
+        updateDescription()
 
         baseDamage = BASE_DAMAGE_NUMBER
     }

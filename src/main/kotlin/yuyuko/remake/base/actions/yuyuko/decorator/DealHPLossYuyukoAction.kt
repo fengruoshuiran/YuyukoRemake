@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.remake.base.actions.YuyukoActionManager
 import yuyuko.remake.base.actions.yuyuko.AbstractYuyukoAction
 
 class DealHPLossYuyukoAction(
@@ -14,6 +15,7 @@ class DealHPLossYuyukoAction(
         private val baseDamage: Int
 ) : AbstractYuyukoAction() {
     override fun action() {
+        YuyukoActionManager.logger.info("Deal HP loss: $baseDamage")
         AbstractDungeon.actionManager.addToBottom(
                 DamageAction(
                     target,

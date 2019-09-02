@@ -29,11 +29,11 @@ object CustomStrings {
                 "credit" -> CreditStrings::class.java
                 "tutorial" -> TutorialStrings::class.java
                 "keyword" -> KeywordStrings::class.java
-                "scorebonus" -> ScoreBonusStrings::class.java
+                "scoreBonus" -> ScoreBonusStrings::class.java
                 "character" -> CharacterStrings::class.java
                 "ui" -> UIStrings::class.java
                 "orb" -> OrbStrings::class.java
-                "RunMod" -> RunModStrings::class.java
+                "runMod" -> RunModStrings::class.java
                 "blight" -> BlightStrings::class.java
                 "achievement" -> AchievementStrings::class.java
                 else -> AchievementStrings::class.java

@@ -15,7 +15,8 @@ object YuyukoRemake :
         EditStringsSubscriber,
         EditCardsSubscriber,
         EditRelicsSubscriber,
-        OnStartBattleSubscriber {
+        OnStartBattleSubscriber,
+        EditKeywordsSubscriber {
     @JvmStatic fun initialize() {}
 
     init {
@@ -31,5 +32,7 @@ object YuyukoRemake :
 
     override fun receiveEditRelics() = CustomManager.setRelics()
 
-    override fun receiveOnBattleStart(room: AbstractRoom?) { EventManager.initSubscribe() }
+    override fun receiveOnBattleStart(room: AbstractRoom?) = EventManager.initSubscribe()
+
+    override fun receiveEditKeywords() = CustomManager.setKeywords()
 }

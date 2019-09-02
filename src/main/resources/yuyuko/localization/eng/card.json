@@ -1,0 +1,10 @@
+{
+  "yuyuko:Butterfly":{
+    "NAME":"Butterfly",
+    "DESCRIPTION": "Deal !D! damage to a random enemy."
+  },
+  "yuyuko:Sakura": {
+    "NAME":"Sakura",
+    "DESCRIPTION": "Heal !M! HP."
+  }
+}

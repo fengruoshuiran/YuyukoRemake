@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Color
 import com.megacrit.cardcrawl.cards.CardGroup
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardColorEnumPatch
+import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClassEnumPatch
 
 object Info {
@@ -27,5 +28,10 @@ object Info {
         private val characterString = CardCrawlGame.languagePack.getCharacterString("yuyuko")
         val name = characterString.NAMES[0]
         val description = characterString.TEXT[0]
+    }
+
+    object Tag {
+        val sakura = CardTagsEnumPatch.SAKURA
+        val butterfly = CardTagsEnumPatch.BUTTERFLY
     }
 }

@@ -2,6 +2,7 @@ package yuyuko.remake.relics
 
 import basemod.abstracts.CustomRelic
 import com.megacrit.cardcrawl.helpers.ImageMaster
+import yuyuko.remake.base.info.Info
 
 abstract class YuyukoRelic(
         relicId: String,
@@ -17,7 +18,7 @@ abstract class YuyukoRelic(
     abstract fun effect()
 
     companion object {
-        val characterName = "yuyuko"
+        private const val characterName = Info.Customs.name
         fun getFullRelicId(relicId: String) = "$characterName:$relicId"
         fun getImgPath(relicId: String) = "$characterName/images/relics/$relicId.png"
     }

@@ -1,7 +1,10 @@
 package yuyuko.remake.cards
 
 interface IYuyukoCard {
-    var isHide: Boolean
+    val isEternal: Boolean
+    val isFleeting: Boolean
+
+    var isHidden: Boolean
     var isFading: Boolean
     var isRebirth: Boolean
 

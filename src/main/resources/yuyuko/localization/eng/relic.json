@@ -1,16 +1,16 @@
 {
   "yuyuko:Flowers and Butterflies": {
-    "NAME": "花蝶",
+    "NAME": "Flowers and Butterflies",
     "FLAVOR": "",
     "DESCRIPTIONS":[
-      "洗牌时，将5张'樱'，5张'蝶'洗入牌堆"
+      "Add 5 'Sakura' and 'Butterfly' to your draw pile when shuffle."
     ]
   },
   "yuyuko:Yuyuko's Fan": {
-    "NAME": "幽幽扇",
+    "NAME": "Yuyuko's Fan",
     "FLAVOR": "",
     "DESCRIPTIONS":[
-      "生者必灭，凡人终死"
+      "Valar Morghulis."
     ]
   }
 }
