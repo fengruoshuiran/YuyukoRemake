@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction
 import com.megacrit.cardcrawl.cards.DamageInfo
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import yuyuko.remake.base.actions.YuyukoActionManager
+import yuyuko.remake.base.actions.yuyuko.decorator.DealHPLossYuyukoAction
 import yuyuko.remake.base.random.YuyukoRng
 
 class DealRandomHPLossBaseAction(private val baseDamage: Int) : AbstractBaseAction() {
@@ -21,12 +22,7 @@ class DealRandomHPLossBaseAction(private val baseDamage: Int) : AbstractBaseActi
             return
         }
 
-        AbstractDungeon.actionManager.addToTop(
-                DamageAction(
-                        target,
-                        DamageInfo(self, baseDamage, DamageInfo.DamageType.HP_LOSS),
-                        AttackEffect.SLASH_DIAGONAL)
-        )
+        YuyukoActionManager.add(DealHPLossYuyukoAction(self, target, baseDamage))
 
         this.isDone = true
     }
