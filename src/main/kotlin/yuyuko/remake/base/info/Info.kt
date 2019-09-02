@@ -3,6 +3,7 @@ package yuyuko.remake.base.info
 import com.badlogic.gdx.graphics.Color
 import com.megacrit.cardcrawl.cards.CardGroup
 import com.megacrit.cardcrawl.core.CardCrawlGame
+import com.megacrit.cardcrawl.helpers.CardHelper
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardColorEnumPatch
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClassEnumPatch
@@ -14,7 +15,7 @@ object Info {
         const val name = "yuyuko"
         val colorType = CardColorEnumPatch.YUYUKO
         val playerType = PlayerClassEnumPatch.YUYUKO
-        val color = Color(227f, 48f, 255f, 1f)
+        val color = CardHelper.getColor(227f, 48f, 255f)!!
     }
 
     object CharacterInfo {
