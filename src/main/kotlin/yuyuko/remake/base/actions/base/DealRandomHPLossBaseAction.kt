@@ -1,7 +1,5 @@
 package yuyuko.remake.base.actions.base
 
-import com.megacrit.cardcrawl.actions.common.DamageAction
-import com.megacrit.cardcrawl.cards.DamageInfo
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import yuyuko.remake.base.actions.YuyukoActionManager
 import yuyuko.remake.base.actions.yuyuko.decorator.DealHPLossYuyukoAction
