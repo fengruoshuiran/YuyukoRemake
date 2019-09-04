@@ -10,7 +10,7 @@ import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.Card
 class Sakura : YuyukoCard(
         id,
         cost,
-        CardType.STATUS,
+        CardType.SKILL,
         CardRarity.SPECIAL,
         CardTarget.SELF
 ) {
@@ -23,8 +23,8 @@ class Sakura : YuyukoCard(
 
         updateDescription()
 
-        baseMagicNumber = baseHealNumber
-        magicNumber = baseHealNumber
+        baseMagicNumber = BASE_HEAL_NUMBER
+        magicNumber = BASE_HEAL_NUMBER
     }
 
 
@@ -42,7 +42,7 @@ class Sakura : YuyukoCard(
 
     override fun upgrade() {
         upgradeName()
-        upgradeMagicNumber(upgradeHealNumber)
+        upgradeMagicNumber(UPGRADE_HEAL_NUMBER)
     }
 
     override fun upgradeName() {
@@ -53,10 +53,10 @@ class Sakura : YuyukoCard(
     }
 
     companion object {
-        val id = "Sakura"
-        val cost = -2
+        private const val id = "Sakura"
+        private const val cost = -2
 
-        var baseHealNumber = 1
-        var upgradeHealNumber = 1
+        private const val BASE_HEAL_NUMBER = 1
+        private const val UPGRADE_HEAL_NUMBER = 1
     }
 }

@@ -10,7 +10,7 @@ import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.Card
 class Butterfly : YuyukoCard(
         id,
         cost,
-        CardType.STATUS,
+        CardType.ATTACK,
         CardRarity.SPECIAL,
         CardTarget.ENEMY
 ){
@@ -50,10 +50,10 @@ class Butterfly : YuyukoCard(
     }
 
     companion object {
-        val id = "Butterfly"
-        val cost = -2
+        private const val id = "Butterfly"
+        private const val cost = -2
 
-        const val BASE_DAMAGE_NUMBER = 1
-        const val UPGRADE_DAMAGE_NUMBER = 1
+        private const val BASE_DAMAGE_NUMBER = 1
+        private const val UPGRADE_DAMAGE_NUMBER = 1
     }
 }
