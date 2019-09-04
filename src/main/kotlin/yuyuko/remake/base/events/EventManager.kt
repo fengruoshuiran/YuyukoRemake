@@ -7,7 +7,7 @@ import yuyuko.remake.base.events.yuyuko.HiddenYuyukoEvent
 import yuyuko.remake.base.events.info.OnDrawHookInfo
 import yuyuko.remake.base.events.info.OnShuffleHookInfo
 import yuyuko.remake.base.events.yuyuko.RebirthYuyukoEvent
-import yuyuko.remake.cards.yuyuko.Sakura
+import yuyuko.remake.cards.yuyuko.token.Sakura
 
 object EventManager {
     private val relationship: MutableMap<String, MutableSet<AbstractYuyukoEvent>> = mutableMapOf()

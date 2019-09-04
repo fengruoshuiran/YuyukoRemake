@@ -1,48 +1,45 @@
-package yuyuko.remake.cards.yuyuko
+package yuyuko.remake.cards.yuyuko.token
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.remake.base.actions.YuyukoActionManager
-import yuyuko.remake.base.actions.yuyuko.decorator.HealYuyukoAction
+import yuyuko.remake.base.actions.yuyuko.custom.DealRandomHPLossYuyukoAction
 import yuyuko.remake.cards.YuyukoCard
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
 
-class Sakura : YuyukoCard(
+class Butterfly : YuyukoCard(
         id,
         cost,
         CardType.STATUS,
         CardRarity.SPECIAL,
-        CardTarget.SELF
-) {
+        CardTarget.ENEMY
+){
     init {
-        isHidden = false
-        isFading = false
-        exhaust = true
+        isHidden = true
+        isFading = true
+        isRebirth = true
 
-        tags.add(CardTagsEnumPatch.SAKURA)
+        tags.add(CardTagsEnumPatch.BUTTERFLY)
 
         updateDescription()
 
-        baseMagicNumber = baseHealNumber
-        magicNumber = baseHealNumber
+        baseDamage = BASE_DAMAGE_NUMBER
     }
 
 
-    override fun makeCopy() = Sakura()
+    override fun makeCopy() = Butterfly()
 
     override fun canUse(self: AbstractPlayer?, target: AbstractMonster?) = true
 
-    override fun use(self: AbstractPlayer?, target: AbstractMonster?) = fading()
-
     override fun fading() {
-        YuyukoActionManager.add(HealYuyukoAction(magicNumber))
+        YuyukoActionManager.add(DealRandomHPLossYuyukoAction(baseDamage))
     }
 
     override fun canUpgrade() = true
 
     override fun upgrade() {
         upgradeName()
-        upgradeMagicNumber(upgradeHealNumber)
+        upgradeMagicNumber(UPGRADE_DAMAGE_NUMBER)
     }
 
     override fun upgradeName() {
@@ -53,10 +50,10 @@ class Sakura : YuyukoCard(
     }
 
     companion object {
-        val id = "Sakura"
+        val id = "Butterfly"
         val cost = -2
 
-        var baseHealNumber = 1
-        var upgradeHealNumber = 1
+        const val BASE_DAMAGE_NUMBER = 1
+        const val UPGRADE_DAMAGE_NUMBER = 1
     }
 }

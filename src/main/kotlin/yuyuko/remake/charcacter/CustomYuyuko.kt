@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.core.EnergyManager
 import com.megacrit.cardcrawl.helpers.FontHelper
 import com.megacrit.cardcrawl.screens.CharSelectInfo
-import yuyuko.remake.cards.yuyuko.Sakura
+import yuyuko.remake.cards.yuyuko.token.Sakura
 import yuyuko.remake.base.info.Info
 
 class CustomYuyuko() : CustomPlayer(

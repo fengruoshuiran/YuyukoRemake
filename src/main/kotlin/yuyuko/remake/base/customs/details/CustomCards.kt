@@ -1,7 +1,8 @@
 package yuyuko.remake.base.customs.details
 
 import basemod.BaseMod
-import yuyuko.remake.cards.yuyuko.*
+import yuyuko.remake.cards.yuyuko.token.Butterfly
+import yuyuko.remake.cards.yuyuko.token.Sakura
 
 object CustomCards {
     fun setCards() {

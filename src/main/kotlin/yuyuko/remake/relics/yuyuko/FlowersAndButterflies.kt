@@ -2,8 +2,8 @@ package yuyuko.remake.relics.yuyuko
 
 import yuyuko.remake.base.actions.YuyukoActionManager
 import yuyuko.remake.base.actions.yuyuko.custom.AddCardToDrawPileYuyukoAction
-import yuyuko.remake.cards.yuyuko.Butterfly
-import yuyuko.remake.cards.yuyuko.Sakura
+import yuyuko.remake.cards.yuyuko.token.Butterfly
+import yuyuko.remake.cards.yuyuko.token.Sakura
 import yuyuko.remake.relics.YuyukoRelic
 
 class FlowersAndButterflies() : YuyukoRelic(
