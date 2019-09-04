@@ -24,7 +24,7 @@ class Butterfly : YuyukoCard(
 
         baseDamage = BASE_DAMAGE_NUMBER
     }
-    val baseName = name
+    private val baseName = name
 
     override fun makeCopy() = Butterfly()
 

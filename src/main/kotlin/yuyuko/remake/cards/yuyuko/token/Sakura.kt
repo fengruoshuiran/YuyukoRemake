@@ -26,7 +26,7 @@ class Sakura : YuyukoCard(
         magicNumber = BASE_HEAL_NUMBER
     }
 
-    val basename = name
+    private val basename = name
 
     override fun makeCopy() = Sakura()
 
