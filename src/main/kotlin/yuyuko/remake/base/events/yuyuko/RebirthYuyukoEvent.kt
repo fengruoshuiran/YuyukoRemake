@@ -16,7 +16,7 @@ class RebirthYuyukoEvent : AbstractYuyukoEvent() {
         val removeCard = CardGroup(CardGroup.CardGroupType.UNSPECIFIED)
 
         for (card in Info.faded.group) {
-            if (card is YuyukoCard && card.isFading) removeCard.addToBottom(card)
+            if (card is YuyukoCard && card.isRebirth) removeCard.addToBottom(card)
             else remainCard.addToBottom(card)
         }
 
