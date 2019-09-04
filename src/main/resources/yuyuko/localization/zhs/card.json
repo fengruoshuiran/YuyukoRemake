@@ -3,6 +3,10 @@
     "NAME":"蝶",
     "DESCRIPTION": "对随机敌人造成 !D! 点伤害。"
   },
+  "yuyuko:Fantasy Butterfly": {
+    "NAME":"幻之蝶",
+    "DESCRIPTION": "给予敌方全体 !M! 层 缠绕 。 升级 所有 蝶 。"
+  },
   "yuyuko:Sakura": {
     "NAME":"樱",
     "DESCRIPTION": "回复 !M! 点生命。"

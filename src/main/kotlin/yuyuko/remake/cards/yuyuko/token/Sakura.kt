@@ -15,9 +15,8 @@ class Sakura : YuyukoCard(
         CardTarget.SELF
 ) {
     init {
-        isHidden = false
-        isFading = false
-        exhaust = true
+        isHidden = true
+        isFading = true
 
         tags.add(CardTagsEnumPatch.SAKURA)
 
@@ -27,6 +26,7 @@ class Sakura : YuyukoCard(
         magicNumber = BASE_HEAL_NUMBER
     }
 
+    val basename = name
 
     override fun makeCopy() = Sakura()
 
@@ -47,9 +47,9 @@ class Sakura : YuyukoCard(
 
     override fun upgradeName() {
         ++timesUpgraded
-        this.upgraded = true
-        this.name ="$name+$timesUpgraded"
-        this.initializeTitle()
+        upgraded = true
+        name ="$basename+$timesUpgraded"
+        initializeTitle()
     }
 
     companion object {

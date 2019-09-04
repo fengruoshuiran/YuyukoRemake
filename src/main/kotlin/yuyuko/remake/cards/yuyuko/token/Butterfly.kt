@@ -17,7 +17,6 @@ class Butterfly : YuyukoCard(
     init {
         isHidden = true
         isFading = true
-        isRebirth = true
 
         tags.add(CardTagsEnumPatch.BUTTERFLY)
 
@@ -25,11 +24,13 @@ class Butterfly : YuyukoCard(
 
         baseDamage = BASE_DAMAGE_NUMBER
     }
-
+    val baseName = name
 
     override fun makeCopy() = Butterfly()
 
     override fun canUse(self: AbstractPlayer?, target: AbstractMonster?) = true
+
+    override fun use(self: AbstractPlayer?, target: AbstractMonster?) = fading()
 
     override fun fading() {
         YuyukoActionManager.add(DealRandomHPLossYuyukoAction(baseDamage))
@@ -39,14 +40,14 @@ class Butterfly : YuyukoCard(
 
     override fun upgrade() {
         upgradeName()
-        upgradeMagicNumber(UPGRADE_DAMAGE_NUMBER)
+        upgradeDamage(UPGRADE_DAMAGE_NUMBER)
     }
 
     override fun upgradeName() {
         ++timesUpgraded
-        this.upgraded = true
-        this.name ="$name+$timesUpgraded"
-        this.initializeTitle()
+        upgraded = true
+        name ="$baseName+$timesUpgraded"
+        initializeTitle()
     }
 
     companion object {

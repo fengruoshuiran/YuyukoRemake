@@ -59,18 +59,12 @@ class CustomYuyuko() : CustomPlayer(
 
     override fun getStartingDeck(): ArrayList<String> {
         val list = arrayListOf<String>(
-                "yuyuko:Sakura",
-                "yuyuko:Sakura",
-                "yuyuko:Sakura",
-                "yuyuko:Sakura",
-                "yuyuko:Sakura",
-                "yuyuko:Sakura",
-                "yuyuko:Butterfly",
-                "yuyuko:Butterfly",
-                "yuyuko:Butterfly",
-                "yuyuko:Butterfly",
-                "yuyuko:Butterfly",
-                "yuyuko:Butterfly"
+                "yuyuko:Fantasy Butterfly",
+                "yuyuko:Fantasy Butterfly",
+                "yuyuko:Fantasy Butterfly",
+                "yuyuko:Fantasy Butterfly",
+                "yuyuko:Fantasy Butterfly",
+                "yuyuko:Fantasy Butterfly"
         )
         //TODO: Add start list
         return list

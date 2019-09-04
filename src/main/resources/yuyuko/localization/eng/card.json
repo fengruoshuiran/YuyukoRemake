@@ -3,6 +3,10 @@
     "NAME":"Butterfly",
     "DESCRIPTION": "Deal !D! damage to a random enemy."
   },
+  "yuyuko:Fantasy Butterfly": {
+    "NAME":"Fantasy Butterfly",
+    "DESCRIPTION": "Give all enemy !M! Constricted. Upgrade all Butterfly."
+  },
   "yuyuko:Sakura": {
     "NAME":"Sakura",
     "DESCRIPTION": "Heal !M! HP."
