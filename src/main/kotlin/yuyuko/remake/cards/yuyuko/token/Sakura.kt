@@ -23,7 +23,6 @@ class Sakura : YuyukoCard(
         updateDescription()
 
         baseMagicNumber = BASE_HEAL_NUMBER
-        magicNumber = BASE_HEAL_NUMBER
     }
 
     private val basename = name
@@ -35,7 +34,7 @@ class Sakura : YuyukoCard(
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) = fading()
 
     override fun fading() {
-        YuyukoActionManager.add(HealYuyukoAction(magicNumber))
+        YuyukoActionManager.add(HealYuyukoAction(baseMagicNumber))
     }
 
     override fun canUpgrade() = true
