@@ -1,0 +1,8 @@
+{
+  "yuyuko:Transparent": {
+    "NAME": "Transparent",
+    "DESCRIPTIONS": [
+      "Reduce 1 damage taken each stack. The stacks reduce by half when shuffle."
+    ]
+  }
+}

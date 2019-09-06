@@ -19,6 +19,7 @@ object CustomManager{
             "event",
             "character",
             "relic",
-            "keyword"
+            "keyword",
+            "power"
     ))
 }
