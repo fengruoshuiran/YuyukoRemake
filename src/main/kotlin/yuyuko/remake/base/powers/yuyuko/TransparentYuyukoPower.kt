@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import yuyuko.remake.base.powers.AbstractYuyukoPower
 
-class Transparent(private val stack: Int) : AbstractYuyukoPower(powerId) {
+class TransparentYuyukoPower(private val stack: Int) : AbstractYuyukoPower(powerId) {
     init {
         owner = AbstractDungeon.player
         type = PowerType.BUFF
