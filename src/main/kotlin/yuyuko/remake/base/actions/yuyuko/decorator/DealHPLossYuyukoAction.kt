@@ -16,7 +16,8 @@ class DealHPLossYuyukoAction(
 ) : AbstractYuyukoAction() {
     override fun action() {
         YuyukoActionManager.logger.info("Deal HP loss: $baseDamage")
-        AbstractDungeon.actionManager.addToBottom(
+        // Update-2019-9-6 In order to prevent target loss, add damage action to top here.
+        AbstractDungeon.actionManager.addToTop(
                 DamageAction(
                     target,
                      DamageInfo(self, baseDamage, DamageInfo.DamageType.HP_LOSS),
