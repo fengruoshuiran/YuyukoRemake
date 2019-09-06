@@ -8,7 +8,7 @@ import yuyuko.remake.cards.AbstractYuyukoCard
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
 
 class Butterfly : AbstractYuyukoCard(
-        id,
+        cardId,
         cost,
         CardType.ATTACK,
         CardRarity.SPECIAL,
@@ -51,7 +51,7 @@ class Butterfly : AbstractYuyukoCard(
     }
 
     companion object {
-        private const val id = "Butterfly"
+        private const val cardId = "Butterfly"
         private const val cost = -2
 
         private const val BASE_DAMAGE_NUMBER = 1

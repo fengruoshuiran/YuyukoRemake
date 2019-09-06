@@ -8,7 +8,7 @@ import yuyuko.remake.cards.AbstractYuyukoCard
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
 
 class Sakura : AbstractYuyukoCard(
-        id,
+        cardId,
         cost,
         CardType.SKILL,
         CardRarity.SPECIAL,
@@ -52,7 +52,7 @@ class Sakura : AbstractYuyukoCard(
     }
 
     companion object {
-        private const val id = "Sakura"
+        private const val cardId = "Sakura"
         private const val cost = -2
 
         private const val BASE_HEAL_NUMBER = 1

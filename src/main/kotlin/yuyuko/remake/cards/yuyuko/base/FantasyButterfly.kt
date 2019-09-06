@@ -10,7 +10,7 @@ import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.Card
 import yuyuko.remake.cards.AbstractYuyukoCard
 
 class FantasyButterfly : AbstractYuyukoCard(
-        id,
+        cardId,
         cost,
         CardType.ATTACK,
         CardRarity.BASIC,
@@ -36,7 +36,7 @@ class FantasyButterfly : AbstractYuyukoCard(
     }
 
     companion object {
-        private const val id = "Fantasy Butterfly"
+        private const val cardId = "Fantasy Butterfly"
         private const val cost = 1
 
         private const val BASE_DEBUFF_NUMBER = 1
