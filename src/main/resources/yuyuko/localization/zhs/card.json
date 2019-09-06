@@ -3,6 +3,10 @@
     "NAME":"蝶",
     "DESCRIPTION": "对随机敌人造成 !D! 点伤害。"
   },
+  "yuyuko:Dreamy Sakura": {
+    "NAME":"梦之樱",
+    "DESCRIPTION": "获得1层 空明 ，升级 所有 樱 。"
+  },
   "yuyuko:Fantasy Butterfly": {
     "NAME":"幻之蝶",
     "DESCRIPTION": "给予敌方全体 !M! 层 缠绕 。 升级 所有 蝶 。"

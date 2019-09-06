@@ -64,7 +64,11 @@ class CustomYuyuko() : CustomPlayer(
                 "yuyuko:Fantasy Butterfly",
                 "yuyuko:Fantasy Butterfly",
                 "yuyuko:Fantasy Butterfly",
-                "yuyuko:Fantasy Butterfly"
+                "yuyuko:Dreamy Sakura",
+                "yuyuko:Dreamy Sakura",
+                "yuyuko:Dreamy Sakura",
+                "yuyuko:Dreamy Sakura",
+                "yuyuko:Dreamy Sakura"
         )
         //TODO: Add start list
         return list

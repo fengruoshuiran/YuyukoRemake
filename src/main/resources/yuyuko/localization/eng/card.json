@@ -3,6 +3,10 @@
     "NAME":"Butterfly",
     "DESCRIPTION": "Deal !D! damage to a random enemy."
   },
+  "yuyuko:Dreamy Sakura": {
+    "NAME":"Dreamy Sakura",
+    "DESCRIPTION": "Gain 1 Transparent. Upgrade all Sakura."
+  },
   "yuyuko:Fantasy Butterfly": {
     "NAME":"Fantasy Butterfly",
     "DESCRIPTION": "Give all enemy !M! Constricted. Upgrade all Butterfly."
