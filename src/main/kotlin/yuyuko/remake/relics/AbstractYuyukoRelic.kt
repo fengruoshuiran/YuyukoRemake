@@ -4,7 +4,7 @@ import basemod.abstracts.CustomRelic
 import com.megacrit.cardcrawl.helpers.ImageMaster
 import yuyuko.remake.base.info.Info
 
-abstract class YuyukoRelic(
+abstract class AbstractYuyukoRelic(
         relicId: String,
         relicTier: RelicTier,
         landingSound: LandingSound

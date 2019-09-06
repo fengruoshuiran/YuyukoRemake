@@ -6,7 +6,7 @@ import yuyuko.remake.base.actions.yuyuko.custom.RebirthYuyukoAction
 import yuyuko.remake.base.events.info.AbstractHookInfo
 import yuyuko.remake.base.events.info.OnShuffleHookInfo
 import yuyuko.remake.base.info.Info
-import yuyuko.remake.cards.YuyukoCard
+import yuyuko.remake.cards.AbstractYuyukoCard
 
 class RebirthYuyukoEvent : AbstractYuyukoEvent() {
     override fun call(info: AbstractHookInfo): Boolean {
@@ -16,7 +16,7 @@ class RebirthYuyukoEvent : AbstractYuyukoEvent() {
         val removeCard = CardGroup(CardGroup.CardGroupType.UNSPECIFIED)
 
         for (card in Info.faded.group) {
-            if (card is YuyukoCard && card.isRebirth) removeCard.addToBottom(card)
+            if (card is AbstractYuyukoCard && card.isRebirth) removeCard.addToBottom(card)
             else remainCard.addToBottom(card)
         }
 
@@ -24,7 +24,7 @@ class RebirthYuyukoEvent : AbstractYuyukoEvent() {
         for (card in remainCard.group) Info.faded.addToBottom(card)
 
         for (card in removeCard.group) {
-            if (card !is YuyukoCard) continue
+            if (card !is AbstractYuyukoCard) continue
             YuyukoActionManager.add(RebirthYuyukoAction(card))
         }
 

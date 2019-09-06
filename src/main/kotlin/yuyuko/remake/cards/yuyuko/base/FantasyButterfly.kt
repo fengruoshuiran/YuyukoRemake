@@ -7,9 +7,9 @@ import yuyuko.remake.base.actions.YuyukoActionManager
 import yuyuko.remake.base.actions.yuyuko.custom.GiveAllEnemyConstrictedPowerYuyukoAction
 import yuyuko.remake.base.actions.yuyuko.custom.UpgradeAllWithTagYuyukoAction
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
-import yuyuko.remake.cards.YuyukoCard
+import yuyuko.remake.cards.AbstractYuyukoCard
 
-class FantasyButterfly : YuyukoCard(
+class FantasyButterfly : AbstractYuyukoCard(
         id,
         cost,
         CardType.ATTACK,

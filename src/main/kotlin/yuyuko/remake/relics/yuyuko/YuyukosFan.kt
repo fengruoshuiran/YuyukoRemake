@@ -5,9 +5,9 @@ import yuyuko.remake.base.events.EventManager
 import yuyuko.remake.base.events.info.OnDrawHookInfo
 import yuyuko.remake.base.events.info.OnShuffleHookInfo
 import yuyuko.remake.base.info.Info
-import yuyuko.remake.relics.YuyukoRelic
+import yuyuko.remake.relics.AbstractYuyukoRelic
 
-class YuyukosFan : YuyukoRelic(
+class YuyukosFan : AbstractYuyukoRelic(
         relicId,
         RelicTier.STARTER,
         LandingSound.MAGICAL

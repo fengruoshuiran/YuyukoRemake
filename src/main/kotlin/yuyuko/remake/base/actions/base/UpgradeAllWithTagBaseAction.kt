@@ -3,7 +3,7 @@ package yuyuko.remake.base.actions.base
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.cards.CardGroup
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
-import yuyuko.remake.cards.YuyukoCard
+import yuyuko.remake.cards.AbstractYuyukoCard
 
 class UpgradeAllWithTagBaseAction(private val tag: AbstractCard.CardTags) : AbstractBaseAction() {
     override fun update() {
@@ -17,7 +17,7 @@ class UpgradeAllWithTagBaseAction(private val tag: AbstractCard.CardTags) : Abst
 
     fun upgradeCardGroup(cardGroup: CardGroup) {
         for (card in cardGroup.group) {
-            if (card is YuyukoCard && card.hasTag(tag)) {
+            if (card is AbstractYuyukoCard && card.hasTag(tag)) {
                 card.upgrade()
                 card.superFlash()
                 card.applyPowers()

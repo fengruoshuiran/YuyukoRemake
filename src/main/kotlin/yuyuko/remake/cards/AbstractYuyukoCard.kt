@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.remake.base.info.Info
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
 
-abstract class YuyukoCard(
+abstract class AbstractYuyukoCard(
         id: String,
         cost: Int,
         type: CardType,

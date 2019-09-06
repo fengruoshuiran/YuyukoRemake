@@ -4,10 +4,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.remake.base.actions.YuyukoActionManager
 import yuyuko.remake.base.actions.yuyuko.custom.DealRandomHPLossYuyukoAction
-import yuyuko.remake.cards.YuyukoCard
+import yuyuko.remake.cards.AbstractYuyukoCard
 import yuyuko.remake.base.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardTagsEnumPatch
 
-class Butterfly : YuyukoCard(
+class Butterfly : AbstractYuyukoCard(
         id,
         cost,
         CardType.ATTACK,

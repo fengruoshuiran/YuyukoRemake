@@ -4,9 +4,9 @@ import yuyuko.remake.base.actions.YuyukoActionManager
 import yuyuko.remake.base.actions.yuyuko.custom.AddCardToDrawPileYuyukoAction
 import yuyuko.remake.cards.yuyuko.token.Butterfly
 import yuyuko.remake.cards.yuyuko.token.Sakura
-import yuyuko.remake.relics.YuyukoRelic
+import yuyuko.remake.relics.AbstractYuyukoRelic
 
-class FlowersAndButterflies() : YuyukoRelic(
+class FlowersAndButterflies() : AbstractYuyukoRelic(
         relicId,
         RelicTier.STARTER,
         LandingSound.MAGICAL

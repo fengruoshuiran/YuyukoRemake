@@ -5,9 +5,9 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect
 import yuyuko.remake.base.actions.YuyukoActionManager
 import yuyuko.remake.base.actions.base.FadingBaseAction
 import yuyuko.remake.base.actions.yuyuko.AbstractYuyukoAction
-import yuyuko.remake.cards.YuyukoCard
+import yuyuko.remake.cards.AbstractYuyukoCard
 
-class FadingYuyukoAction(private val card: YuyukoCard) : AbstractYuyukoAction() {
+class FadingYuyukoAction(private val card: AbstractYuyukoCard) : AbstractYuyukoAction() {
     override fun action() {
         YuyukoActionManager.logger.info("Fading: ${card.name}")
         AbstractDungeon.effectList.add(ShowCardBrieflyEffect(card))
