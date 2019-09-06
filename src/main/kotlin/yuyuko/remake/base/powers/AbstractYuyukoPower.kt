@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import yuyuko.remake.base.info.Info
 
-abstract class AbstractYuyukoPower(private val powerId: String) : AbstractPower() {
+abstract class AbstractYuyukoPower(powerId: String) : AbstractPower() {
     init {
         ID = getFullId(powerId)
         name = getName(powerId)
@@ -14,7 +14,7 @@ abstract class AbstractYuyukoPower(private val powerId: String) : AbstractPower(
     }
 
     companion object {
-        private val characterName = Info.Customs.name
+        private const val characterName = Info.Customs.name
         private fun getFullId(id: String) = "$characterName:$id"
         private fun getPowerString(id: String) = CardCrawlGame.languagePack.getPowerStrings(getFullId(id))
         private fun getName(id: String) = getPowerString(id).NAME
