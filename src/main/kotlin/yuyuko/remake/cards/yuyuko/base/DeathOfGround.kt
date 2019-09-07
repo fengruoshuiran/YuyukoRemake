@@ -22,7 +22,7 @@ class DeathOfGround() : AbstractYuyukoCard(
         baseMagicNumber = BASE_BUFF_NUMBER
     }
 
-    override fun makeCopy(): AbstractCard  = DeathOfGround()
+    override fun makeCopy() = DeathOfGround()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         YuyukoActionManager.add(DealHPLossYuyukoAction(target, baseDamage))

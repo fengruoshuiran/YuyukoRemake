@@ -23,7 +23,7 @@ class FantasyButterfly : AbstractYuyukoCard(
         baseMagicNumber = BASE_DEBUFF_NUMBER
     }
 
-    override fun makeCopy(): AbstractCard = FantasyButterfly()
+    override fun makeCopy() = FantasyButterfly()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         YuyukoActionManager.add(GiveAllEnemyConstrictedPowerYuyukoAction(baseMagicNumber))

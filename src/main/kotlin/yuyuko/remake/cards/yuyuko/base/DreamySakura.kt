@@ -22,7 +22,7 @@ class DreamySakura() : AbstractYuyukoCard(
         baseMagicNumber = BASE_BUFF_NUMBER
     }
 
-    override fun makeCopy(): AbstractCard = DreamySakura()
+    override fun makeCopy() = DreamySakura()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         YuyukoActionManager.add(GainTransparentPowerYuyukoAction(baseMagicNumber))
