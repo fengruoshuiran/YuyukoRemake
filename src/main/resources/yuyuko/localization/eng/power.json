@@ -4,5 +4,11 @@
     "DESCRIPTIONS": [
       "Reduce 1 damage taken each stack. The stacks reduce by half when shuffle."
     ]
+  },
+  "yuyuko:Ghost": {
+    "NAME": "Ghost",
+    "DESCRIPTIONS": [
+      "At the end of turn, Deal damage equal to the count of your remaining card and give 1 Constricted to a random enemy each stack."
+    ]
   }
 }
