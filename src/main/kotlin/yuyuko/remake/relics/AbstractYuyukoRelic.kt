@@ -15,6 +15,8 @@ abstract class AbstractYuyukoRelic(
         relicTier,
         landingSound
 ) {
+    override fun getUpdatedDescription() : String = DESCRIPTIONS[0]
+
     abstract fun effect()
 
     companion object {

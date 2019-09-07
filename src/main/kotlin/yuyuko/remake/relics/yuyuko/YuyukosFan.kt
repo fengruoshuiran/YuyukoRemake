@@ -20,10 +20,6 @@ class YuyukosFan : AbstractYuyukoRelic(
 
     override fun makeCopy() = YuyukosFan()
 
-    override fun getUpdatedDescription(): String {
-        return DESCRIPTIONS[0]
-    }
-
     override fun effect() {}
 
     companion object {
