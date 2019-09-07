@@ -20,8 +20,6 @@ class YuyukosFan : AbstractYuyukoRelic(
 
     override fun makeCopy() = YuyukosFan()
 
-    override fun effect() {}
-
     companion object {
         val relicId = "Yuyuko's Fan"
     }

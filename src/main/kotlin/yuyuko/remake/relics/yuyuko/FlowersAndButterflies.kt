@@ -17,7 +17,7 @@ class FlowersAndButterflies() : AbstractYuyukoRelic(
 
     override fun makeCopy() = FlowersAndButterflies()
 
-    override fun effect() {
+    private fun effect() {
         repeat(5) { YuyukoActionManager.add(AddCardToDrawPileYuyukoAction(Sakura())) }
         repeat(5) { YuyukoActionManager.add(AddCardToDrawPileYuyukoAction(Butterfly())) }
     }

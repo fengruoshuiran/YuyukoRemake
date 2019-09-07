@@ -17,8 +17,6 @@ abstract class AbstractYuyukoRelic(
 ) {
     override fun getUpdatedDescription() : String = DESCRIPTIONS[0]
 
-    abstract fun effect()
-
     companion object {
         private const val characterName = Info.Customs.name
         fun getFullRelicId(relicId: String) = "$characterName:$relicId"
