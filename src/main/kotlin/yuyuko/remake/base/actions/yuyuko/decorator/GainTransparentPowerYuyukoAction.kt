@@ -11,8 +11,7 @@ class GainTransparentPowerYuyukoAction(private val powerAmount: Int) : AbstractY
         YuyukoActionManager.logger.info("Gain Transparent power: $powerAmount")
 
         val player = AbstractDungeon.player
-        // Update-2019-9-6 In order to prevent target loss, add damage action to top here.
-        AbstractDungeon.actionManager.addToTop(
+        AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         player, player,
                         TransparentYuyukoPower(powerAmount),

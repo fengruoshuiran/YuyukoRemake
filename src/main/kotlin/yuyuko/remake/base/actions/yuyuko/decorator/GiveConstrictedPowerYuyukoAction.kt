@@ -14,7 +14,8 @@ class GiveConstrictedPowerYuyukoAction(
         val player = AbstractDungeon.player
 
         YuyukoActionManager.logger.info("Give $powerAmount constricted to: ${target.name}")
-        AbstractDungeon.actionManager.addToBottom(
+        // Update-2019-9-7 In order to prevent target loss, add to top here.
+        AbstractDungeon.actionManager.addToTop(
                 ApplyPowerAction(
                         target, player,
                         ConstrictedPower(target, player, powerAmount),
