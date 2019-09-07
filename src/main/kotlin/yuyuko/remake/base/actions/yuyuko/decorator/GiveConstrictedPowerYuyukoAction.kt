@@ -8,9 +8,11 @@ import yuyuko.remake.base.actions.YuyukoActionManager
 import yuyuko.remake.base.actions.yuyuko.AbstractYuyukoAction
 
 class GiveConstrictedPowerYuyukoAction(
-        private val target: AbstractMonster,
+        private val target: AbstractMonster?,
         private val powerAmount: Int) : AbstractYuyukoAction() {
     override fun action() {
+        if (target == null) return
+
         val player = AbstractDungeon.player
 
         YuyukoActionManager.logger.info("Give $powerAmount constricted to: ${target.name}")

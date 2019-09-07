@@ -10,12 +10,14 @@ import yuyuko.remake.base.actions.YuyukoActionManager
 import yuyuko.remake.base.actions.yuyuko.AbstractYuyukoAction
 
 class DealHPLossYuyukoAction(
-        private val player: AbstractPlayer,
-        private val target: AbstractMonster,
+        private val target: AbstractMonster?,
         private val baseDamage: Int
 ) : AbstractYuyukoAction() {
     override fun action() {
+        if (target == null) return
+
         YuyukoActionManager.logger.info("Deal HP loss: $baseDamage")
+        val player = AbstractDungeon.player
         // Update-2019-9-6 In order to prevent target loss, add to top here.
         AbstractDungeon.actionManager.addToTop(
                 DamageAction(
