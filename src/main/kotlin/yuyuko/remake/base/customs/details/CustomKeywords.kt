@@ -15,7 +15,8 @@ object CustomKeywords {
                 "Sakura",
                 "Butterfly",
                 "Transparent",
-                "Ghost"
+                "Ghost",
+                "Constricted"
         )
 
         for (keyword in keywordList) {

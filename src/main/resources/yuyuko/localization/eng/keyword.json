@@ -59,5 +59,11 @@
       "Ghost",
       "At the end of turn, Deal damage equal to the count of your remaining card and give 1 Constricted to a random enemy each stack."
     ]
+  },
+  "yuyuko:Constricted": {
+    "TEXT":[
+      "Constricted",
+      "At the end of turn, Deal 1 damage to owner each stack."
+    ]
   }
 }
