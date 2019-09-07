@@ -9,8 +9,9 @@ class GainBlockYuyukoAction(private val blockAmount: Int) : AbstractYuyukoAction
     override fun action() {
         YuyukoActionManager.logger.info("Gain block: $blockAmount")
 
+        // Update-2019-9-7 Add to top for better VFX.
         val player = AbstractDungeon.player
-        AbstractDungeon.actionManager.addToBottom(
+        AbstractDungeon.actionManager.addToTop(
                 GainBlockAction(player, player, blockAmount)
         )
     }
