@@ -13,6 +13,6 @@ class CoronalEffectBaseAction(private val healAmount: Int) : AbstractBaseAction(
             YuyukoActionManager.add(GainBlockYuyukoAction(ceil(overhealAmount / 2.0f).toInt()))
         }
 
-        this.isDone
+        this.isDone = true
     }
 }
