@@ -13,5 +13,7 @@ class GhostPowerEffectBaseAction() : AbstractBaseAction() {
         YuyukoActionManager.add(DealHPLossYuyukoAction(target, 1))
         YuyukoActionManager.add(GiveConstrictedPowerYuyukoAction(target, 1))
         YuyukoActionManager.add(ReduceGhostPowerYuyukoAction(1))
+
+        this.isDone = true
     }
 }
