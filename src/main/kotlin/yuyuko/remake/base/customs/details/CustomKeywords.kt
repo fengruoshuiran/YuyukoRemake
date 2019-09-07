@@ -16,7 +16,8 @@ object CustomKeywords {
                 "Butterfly",
                 "Transparent",
                 "Ghost",
-                "Constricted"
+                "Constricted",
+                "Overheal"
         )
 
         for (keyword in keywordList) {

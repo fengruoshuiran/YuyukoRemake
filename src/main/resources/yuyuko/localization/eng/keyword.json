@@ -65,5 +65,11 @@
       "Constricted",
       "At the end of turn, Deal #b1 damage to owner each stack."
     ]
+  },
+  "yuyuko:Overheal": {
+    "TEXT":[
+      "Overheal",
+      "#bHeal #bamount over #byour #bdamaged."
+    ]
   }
 }
