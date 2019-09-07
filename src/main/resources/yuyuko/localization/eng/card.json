@@ -3,6 +3,10 @@
     "NAME":"Butterfly",
     "DESCRIPTION": "Deal !D! damage to a random enemy."
   },
+  "yuyuko:Death of Ground": {
+    "NAME":"Death of Ground",
+    "DESCRIPTION": "Deal !D! damage. Gain !M! Ghost."
+  },
   "yuyuko:Dreamy Sakura": {
     "NAME":"Dreamy Sakura",
     "DESCRIPTION": "Gain 1 Transparent. Upgrade all Sakura."

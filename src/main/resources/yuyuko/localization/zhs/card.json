@@ -3,6 +3,10 @@
     "NAME":"蝶",
     "DESCRIPTION": "对随机敌人造成 !D! 点伤害。"
   },
+  "yuyuko:Death of Ground": {
+    "NAME":"死还的大地",
+    "DESCRIPTION": "造成 !D! 点伤害，获得 !M! 层 幽灵 。"
+  },
   "yuyuko:Dreamy Sakura": {
     "NAME":"梦之樱",
     "DESCRIPTION": "获得1层 空明 ，升级 所有 樱 。"
