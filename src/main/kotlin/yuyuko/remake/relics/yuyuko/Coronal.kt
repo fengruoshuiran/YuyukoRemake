@@ -32,6 +32,7 @@ class Coronal() : AbstractYuyukoRelic(
     }
 
     override fun onEnterRoom(room: AbstractRoom?) {
+        // TODO: Need more test.
         isBattleStart = false
     }
 
