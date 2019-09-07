@@ -78,7 +78,8 @@ class CustomYuyuko() : CustomPlayer(
     override fun getStartingRelics(): ArrayList<String> {
         return arrayListOf(
                 "yuyuko:Yuyuko's Fan",
-                "yuyuko:Flowers and Butterflies"
+                "yuyuko:Flowers and Butterflies",
+                "yuyuko:Coronal"
         )
     }
 

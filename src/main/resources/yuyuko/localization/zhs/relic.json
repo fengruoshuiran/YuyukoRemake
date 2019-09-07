@@ -1,4 +1,11 @@
 {
+  "yuyuko:Coronal": {
+    "NAME": "天冠",
+    "FLAVOR": "",
+    "DESCRIPTIONS":[
+      "你 #y过疗 的 #b一半 将转换为 #y格挡 。你的 #y格挡 不会在回合开始时消失"
+    ]
+  },
   "yuyuko:Flowers and Butterflies": {
     "NAME": "花蝶",
     "FLAVOR": "",

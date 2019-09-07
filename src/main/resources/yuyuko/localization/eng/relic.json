@@ -1,4 +1,11 @@
 {
+  "yuyuko:Coronal": {
+    "NAME": "Coronal",
+    "FLAVOR": "",
+    "DESCRIPTIONS":[
+      "#bHalf of your $yOverheal will be #yBlock. Your #yBlock will not disappear at start of turn."
+    ]
+  },
   "yuyuko:Flowers and Butterflies": {
     "NAME": "Flowers and Butterflies",
     "FLAVOR": "",
