@@ -3,7 +3,7 @@
     "NAME": "花蝶",
     "FLAVOR": "",
     "DESCRIPTIONS":[
-      "洗牌时，将5张'樱'，5张'蝶'洗入牌堆"
+      "洗牌时，将 #b5 张'樱'，#b5 张'蝶'洗入牌堆"
     ]
   },
   "yuyuko:Yuyuko's Fan": {

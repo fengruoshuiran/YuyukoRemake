@@ -51,19 +51,19 @@
   "yuyuko:Transparent": {
     "TEXT":[
       "Transparent",
-      "Reduce 1 damage taken each stack. The stacks reduce by half when shuffle."
+      "Reduce #b1 damage taken each stack. The stacks reduce by half when shuffle."
     ]
   },
   "yuyuko:Ghost": {
     "TEXT":[
       "Ghost",
-      "At the end of turn, Deal damage equal to the count of your remaining card and give 1 Constricted to a random enemy each stack."
+      "At the end of turn, Deal damage equal to the #bcount #bof #byour #bremaining #bcard and give #b1 #yConstricted to a random enemy each stack."
     ]
   },
   "yuyuko:Constricted": {
     "TEXT":[
       "Constricted",
-      "At the end of turn, Deal 1 damage to owner each stack."
+      "At the end of turn, Deal #b1 damage to owner each stack."
     ]
   }
 }
