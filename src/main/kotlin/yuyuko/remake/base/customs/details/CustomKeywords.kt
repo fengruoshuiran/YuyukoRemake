@@ -14,7 +14,8 @@ object CustomKeywords {
                 "Rebirth",
                 "Sakura",
                 "Butterfly",
-                "Transparent"
+                "Transparent",
+                "Ghost"
         )
 
         for (keyword in keywordList) {
