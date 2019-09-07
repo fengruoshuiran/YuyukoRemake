@@ -10,7 +10,7 @@ import yuyuko.remake.base.actions.YuyukoActionManager
 import yuyuko.remake.base.actions.yuyuko.AbstractYuyukoAction
 
 class DealHPLossYuyukoAction(
-        private val self: AbstractPlayer,
+        private val player: AbstractPlayer,
         private val target: AbstractMonster,
         private val baseDamage: Int
 ) : AbstractYuyukoAction() {
@@ -20,7 +20,7 @@ class DealHPLossYuyukoAction(
         AbstractDungeon.actionManager.addToTop(
                 DamageAction(
                     target,
-                     DamageInfo(self, baseDamage, DamageInfo.DamageType.HP_LOSS),
+                     DamageInfo(player, baseDamage, DamageInfo.DamageType.HP_LOSS),
                    AbstractGameAction.AttackEffect.SLASH_DIAGONAL
                 )
         )
