@@ -14,6 +14,7 @@ class GhostYuyukoPower(stack: Int) : AbstractYuyukoPower(powerId) {
         type = PowerType.BUFF
         amount = stack
         isTurnBased = false
+
         updateDescription()
     }
 
