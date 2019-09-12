@@ -11,7 +11,9 @@ class FadingYuyukoEvent : AbstractYuyukoEvent() {
         if (info !is OnDrawHookInfo) return false
         if (info.card !is AbstractYuyukoCard) return false
         if (!shouldFading(info.card)) return false
+
         YuyukoActionManager.add(FadingYuyukoAction(info.card))
+
         return true
     }
 

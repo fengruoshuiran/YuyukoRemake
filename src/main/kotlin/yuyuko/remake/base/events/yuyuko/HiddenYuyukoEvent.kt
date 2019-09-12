@@ -12,7 +12,9 @@ class HiddenYuyukoEvent() : AbstractYuyukoEvent() {
         if (info !is OnDrawHookInfo) return false
         if (info.card !is AbstractYuyukoCard) return false
         if (!shouldHide(info.card)) return false
+
         YuyukoActionManager.add(HiddenYuyukoAction(info.card))
+
         return true
     }
 
